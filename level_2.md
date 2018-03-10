@@ -67,7 +67,7 @@ Bütün bu işlemler uygulandıktan sonra örneğin son hali Resim2.5-de olduğu
 
 ![image2.5](/images/level_2/image2_1.png)
 
-_Resim2.5 Ağın son hali _
+_Resim2.5 Ağın son hali_
 
 #### 1.7	Föyde Verilen Örnek İçin Test Aşamasının Gerçeklemesi
 
@@ -77,9 +77,11 @@ Yukarıdaki örnekteki ağın çalışıp çalışmadığını test etmek için 
 
 ![image2.6](/images/level_2/image2_5.png)
 
-_Resim2.6 Föy-de yapılması istenilen atamalar _
+
+_Resim2.6 Föy-de yapılması istenilen atamalar_
 
 ![image2.7](/images/level_2/image2_6.png)
+
 
 _Resim2.7 Ağda bulunan farklı pc-lere ping atılması _
 
@@ -89,7 +91,8 @@ Bağlantının test edilmesinin bir diğer yolu da simülasyon (simulation) çal
 
 ![image2.8](/images/level_2/image2_9.png)
 
-_Resim2.8 Simulation menüsü _
+
+_Resim2.8 Simulation menüsü_
 
 Bu menü, üç bölümden oluşmaktadır. Bunlar; Event List, Play Control ve Event List Filter bölümleridir. Event List bölümünde, veri iletimi süresince gönderilen paketler listelenir. Play kontrol bölümüyse simülasyonun çalıştırılması ile ilgili olan kısımdır. Event List Filter bölümü, ağ simülasyonunda hangi protokollerin kullanılacağının belirlendiği bölümdür. Ağ simülasyon yazılımı, tüm protokolleri destekler ve ayrıca burada simülasyonda görmek istediğimiz protokolü seçebiliriz. 
 
@@ -97,7 +100,7 @@ Basit bir test için Event List Filter bölümünde bulunan Edit Filter düğmes
 
 ![image2.9](/images/level_2/image2_8.png)
 
-_Resim2.9 Event List Filter menusunde ARP ve ICMP protokollerinin seçilmesi _
+_Resim2.9 Event List Filter menusunde ARP ve ICMP protokollerinin seçilmesi_
 
 Play Control bölümünde bulunan yatay kaydırma çubuğu, paketlerin ağ cihazları arasında gönderim hızını belirlemek için kullanır. Add Simple PDU bölümü ise ağ Event List Filter bölümünde bulunan protokoller için bir ağ simülasyonu yapmaya olanak tanır.
 Add Simple PDU düğmesi seçili konumdayken ağ iletişiminin test edileceği Ogr1 bilgisayarına bastıktan sonra Ogr4 bilgisayarlarına basalım. Bu işlem sonucunda Şekil1.7.5’de görünen yapı ile karşılaşırız.
@@ -112,7 +115,9 @@ Yukarıda ki adımlar izlenerek uygulama faaliyetinin adım adım gerçekleştir
 
 ![image2.11](/images/level_2/image2_10.png)
 
-_Resim2.11 Ağın föyde belirtildiği gibi kurulması _
+
+_Resim2.11 Ağın föyde belirtildiği gibi kurulması_
+
 
 •	Sırasıyla bilgisayarlara IP adresi verildi.
 
@@ -133,7 +138,9 @@ Bil6 -> IP adres: 172.168.0.13, Subnet mask: 255.255.0.0, Default gateway: 172.1
 
 ![image2.13](/images/level_2/image2_11.png)
 
-_Resim2.12 Föyde belirtilen ip ve default gateway adreslerine gör bilgisayarların yapılandırılması _
+
+_Resim2.12 Föyde belirtilen ip ve default gateway adreslerine gör bilgisayarların yapılandırılması_
+
 
 •	Routher-ın “Ethernet” portları açılarak, IP yapılandırması gerçekleştirildi.
 
@@ -145,7 +152,9 @@ FA0/1: IP address: 172.16.0.1, Subnet mask: 255.255. 0.0)
 
 ![image2.15](/images/level_2/image2_14.png)
 
-_Resim2.13 Router-ın yapılandırılması _
+
+_Resim2.13 Router-ın yapılandırılması_
+
 
 •	Bil1 isimli bilgisayardan Bil4, Bil5 ve Bil6 bilgisayarları arasındaki bağlantının test edilmesi.
 
@@ -153,27 +162,37 @@ _Resim2.13 Router-ın yapılandırılması _
 
 ![image2.17](/images/level_2/image2_16.png)
 
-_Resim2.14 Bilgisayarlar arasındaki bağlantıların test edilmesi. _
+
+_Resim2.14 Bilgisayarlar arasındaki bağlantıların test edilmesi._
+
 
 •	Bilgisayarlar arasındaki bağlantının simulation çalışma kipi kullanılarak test edilmesi.
 
 ![image2.18](/images/level_2/image2_19.png)
 
-_Resim2.15 Simulation sekmesine geçip “Edit Filter” sekmesine geçilmesi. _
+
+_Resim2.15 Simulation sekmesine geçip “Edit Filter” sekmesine geçilmesi_
+
 
 ![image2.19](/images/level_2/image2_8.png)
 
-_Resim2.16 ICMP ve ARP protokollerini seçilmesi ve simulation için ağın hazır hale gelmesi. _
+
+_Resim2.16 ICMP ve ARP protokollerini seçilmesi ve simulation için ağın hazır hale gelmesi_
+
 
 ![image2.20](/images/level_2/image2_19.png)
 
 ![image2.21](/images/level_2/image2_20.png)
 
-_Resim2.17 Simulation-un başlatılması ve paketin hareketi. _
+
+_Resim2.17 Simulation-un başlatılması ve paketin hareketi_
+
 
 ![image2.22](/images/level_2/image2_21.png)
 
-_Resim2.18 Simulation-un bitmesi. _
+
+_Resim2.18 Simulation-un bitmesi_
+
 
 •	Simulation panel-de Event list sekmesinde her hangi bir event-a çift tıkladığımızda, paketin hangi OSI katmanından geçtiğini takip edebiliriz.
 
@@ -183,4 +202,5 @@ _Resim2.18 Simulation-un bitmesi. _
 
 ![image2.25](/images/level_2/image2_24.png)
 
-_Resim2.19 Eventlist-teki ilk event-in incelenmesi. _
+
+_Resim2.19 Eventlist-teki ilk event-in incelenmesi_
