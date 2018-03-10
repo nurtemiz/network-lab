@@ -59,9 +59,12 @@ _Resim2.2 PC yapılandırması_
 
 _Resim2.3 Ip adres ataması (PC)_
 
+
 ![image2.4](/images/level_2/image2_4.png)
 
-_Resim2.4 Router yapılandırılması _
+
+_Resim2.4 Router yapılandırılması_
+
 
 Bütün bu işlemler uygulandıktan sonra örneğin son hali Resim2.5-de olduğu gibidir.
 
@@ -83,7 +86,7 @@ _Resim2.6 Föy-de yapılması istenilen atamalar_
 ![image2.7](/images/level_2/image2_6.png)
 
 
-_Resim2.7 Ağda bulunan farklı pc-lere ping atılması _
+_Resim2.7 Ağda bulunan farklı pc-lere ping atılması_
 
 Ogr4 bilgisayarının IP numarası, 172.16.0.12 olduğu için ping komutunun yanında bu adres belirtilmişti. Komutun sonunda, komutla ilgili bilgi verilmektedir. 4 paket gönderilmiş ve sadece 3 pakete yanıt alınabilmiş demektir. Bunun sebebi, gönderilen ilk paket, ARP işlemi için kullanıldığından bu paket için bir yanıt alınamamış olmasıdır. Bu durum ekranda request timeout (istek zaman aşımına uğradı) satırında belirtilmektedir.
 
