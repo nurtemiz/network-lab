@@ -1,5 +1,7 @@
 ### 1.	LAN SİMULASYONU
 
+![image2.1](/images/level_2/image2_1.png)
+
 #### 1.1	LAN Cihazları
 
 LAN (Local Area Network), fiziksel olarak birbirine yakın olan bilgisayarların arasında bir ağ bağlantısı kurmak amacıyla tercih edilen bağlantı şeklidir. 
@@ -39,5 +41,146 @@ Yerel ağda çalışacak bir yönlendirici yapılandırılırken sadece “Ether
 
 #### 1.6	Yönlendirme Yapılandırması
 
-Yönlendiricinin yapılandırması işleminde temel olarak router-ın bilgisayarlar için yerel ağdan İnternete veya başka yerel ağlara ulaşmak için bir geçit yolu olacağının bilinmesi gerekir. Yönlendiricinin yerel ağa bağlı olan portundaki IP adresi, bilgisayarlar için ayarlandığı default gateway-i, IP adresi olması gerektiğini unutmamak gerekir. Föyde verilen örneği gerçekleyecek olursak; -MEGEP- isimli yönlendiricinin iki portunda iki yerel ağ bağlantısı bulunmaktadır. Örneğe göre -Router-ın Fa0/0 ayağına verilecek olan IP adresi 192.168.1.0/24 ağı için default gateway adresi olacaktır. Hatırlamakta kolaylık olması açısından, kullanılabilir ilk IP adresini vermekte fayda vardır. Bu örneğe göre Fa0/0 ayağına, 192.168.1.1 IP adresi default gateway olarak verilebilir.
+Yönlendiricinin yapılandırması işleminde temel olarak router-ın bilgisayarlar için yerel ağdan İnternete veya başka yerel ağlara ulaşmak için bir geçit yolu olacağının bilinmesi gerekir. Yönlendiricinin yerel ağa bağlı olan portundaki IP adresi, bilgisayarlar için ayarlandığı default gateway-i, IP adresi olması gerektiğini unutmamak gerekir. Föyde verilen örneği gerçekleyecek olursak; -MEGEP- isimli yönlendiricinin iki portunda iki yerel ağ bağlantısı bulunmaktadır. 
 
+Örneğe göre -Router-ın Fa0/0 ayağına verilecek olan IP adresi 192.168.1.0/24 ağı için default gateway adresi olacaktır. Hatırlamakta kolaylık olması açısından, kullanılabilir ilk IP adresini vermekte fayda vardır. Bu örneğe göre Fa0/0 ayağına, 192.168.1.1 IP adresi default gateway olarak verilebilir.
+
+![image2.2](/images/level_2/image2_2.png)
+
+_Resim2.2 PC yapılandırması_
+
+**Yönlendirici ağlar arasında paketlerin geçişini ve trafiğin denetlenmesini sağlayacağı için her iki portunda da yerel ağlarda kullanılan IP adresleri bulunması ve portların açık olması gerekmektedir.**
+
+**Yönlendiricinin yapılandırması işleminde, yerel ağa bağlı bulunan “Ethernet” portlarını yapılandırılması gerekmektedir.**
+
+**IP Address ve subnet mask bölümlerine, yönlendiricinin bilgisayarlar için varsayılan ağ geçidi (Default Gateway) olması gerektiği unutulmamalıdır.**
+
+![image2.3](/images/level_2/image2_3.png)
+
+_Resim2.3 Ip adres ataması (PC)_
+
+![image2.4](/images/level_2/image2_4.png)
+
+_Resim2.4 Router yapılandırılması _
+
+Bütün bu işlemler uygulandıktan sonra örneğin son hali Resim2.5-de olduğu gibidir.
+
+![image2.5](/images/level_2/image2_1.png)
+
+_Resim2.5 Ağın son hali _
+
+#### 1.7	Föyde Verilen Örnek İçin Test Aşamasının Gerçeklemesi
+
+Yukarıdaki örnekteki ağın çalışıp çalışmadığını test etmek için iki yol bulunmaktadır. İlki Ogr1 bilgisayarının masaüstünde bulunan komut satırı (Command Prompt) programını çalıştırılmasıdır. Komut satırı arabiriminde, Ogr4 bilgisayarı ağ bağlantısının durumunu kontrol etmek için ping komutunu kullanırız. 
+
+**Ping** komutu, ICMP (Internet Control Message Protokol) kapsamında yankı (Echo) paketleri gönderir. Eğer ulaşmak istediğimiz bilgisayar, yankı paketlerimize yanıt veriyorsa iki bilgisayar arasında bağlantı var demektir. Eğer bağlanmak istediğimiz bilgisayar, yanıt vermiyorsa bağlantı ile ilgili bir sorun var demektir. (Resim2.6-da ping işlemi gerçeklenmiştir.)
+
+![image2.6](/images/level_2/image2_5.png)
+
+_Resim2.6 Föy-de yapılması istenilen atamalar _
+
+![image2.7](/images/level_2/image2_6.png)
+
+_Resim2.7 Ağda bulunan farklı pc-lere ping atılması _
+
+Ogr4 bilgisayarının IP numarası, 172.16.0.12 olduğu için ping komutunun yanında bu adres belirtilmişti. Komutun sonunda, komutla ilgili bilgi verilmektedir. 4 paket gönderilmiş ve sadece 3 pakete yanıt alınabilmiş demektir. Bunun sebebi, gönderilen ilk paket, ARP işlemi için kullanıldığından bu paket için bir yanıt alınamamış olmasıdır. Bu durum ekranda request timeout (istek zaman aşımına uğradı) satırında belirtilmektedir.
+
+Bağlantının test edilmesinin bir diğer yolu da simülasyon (simulation) çalışma modunda ağın test edilmesidir. Simülasyon moduna geçildiği zaman, çalışma alanının sağ tarafında yeni bir menü çıkar.
+
+![image2.8](/images/level_2/image2_9.png)
+
+_Resim2.8 Simulation menüsü _
+
+Bu menü, üç bölümden oluşmaktadır. Bunlar; Event List, Play Control ve Event List Filter bölümleridir. Event List bölümünde, veri iletimi süresince gönderilen paketler listelenir. Play kontrol bölümüyse simülasyonun çalıştırılması ile ilgili olan kısımdır. Event List Filter bölümü, ağ simülasyonunda hangi protokollerin kullanılacağının belirlendiği bölümdür. Ağ simülasyon yazılımı, tüm protokolleri destekler ve ayrıca burada simülasyonda görmek istediğimiz protokolü seçebiliriz. 
+
+Basit bir test için Event List Filter bölümünde bulunan Edit Filter düğmesine basarak sadece ICMP ile ARP protokollerinin seçilir. Burada tüm protokollerin seçili olması Simpel PDU yapısı açısından bir sıkıntı oluşturmaz. Simple PDU temelde ICMP ve ARP protokolleri ile çalışır. Yalnız simülasyon testi bu iki protokolle çalışsa bile seçili tüm protokoller için paket gönderme işlemi bitmeden test bitmiş olmaz. Bu da hem zaman kaybına hem de karışıklığa neden olacaktır.
+
+![image2.9](/images/level_2/image2_8.png)
+
+_Resim2.9 Event List Filter menusunde ARP ve ICMP protokollerinin seçilmesi _
+
+Play Control bölümünde bulunan yatay kaydırma çubuğu, paketlerin ağ cihazları arasında gönderim hızını belirlemek için kullanır. Add Simple PDU bölümü ise ağ Event List Filter bölümünde bulunan protokoller için bir ağ simülasyonu yapmaya olanak tanır.
+Add Simple PDU düğmesi seçili konumdayken ağ iletişiminin test edileceği Ogr1 bilgisayarına bastıktan sonra Ogr4 bilgisayarlarına basalım. Bu işlem sonucunda Şekil1.7.5’de görünen yapı ile karşılaşırız.
+
+Ogr1 bilgisayarının üzerinde bir zarf görüntülenir ve ekranın sağ kısmında Ogr1 ile Ogr4 arasında bir veri trafiğinin gerçekleşeceği, bilgisi görüntülenir. Auto Capture/Play tuşuna bastığımızda simülasyon, ağ cihazları arasında paket gönderimini gösteren bir animasyon etkinliğinde gerçekleşir.
+
+Simülasyon tamamlandıktan sonra Evenlt List bölümünde bulunan paketler incelenerek ağ iletişimi süresince, hangi olayların meydana geldiği analiz edilebilir.
+
+### UYGULAMA FAALİYETİ
+
+Yukarıda ki adımlar izlenerek uygulama faaliyetinin adım adım gerçekleştirilmesi aşağıdaki resimlerle gösterilmiştir.
+
+![image2.11](/images/level_2/image2_10.png)
+
+_Resim2.11 Ağın föyde belirtildiği gibi kurulması _
+
+•	Sırasıyla bilgisayarlara IP adresi verildi.
+
+(Bil1 -> IP address: 192.168.1.11, Subnet mask: 255.255.255.0, Default gateway:192.168.1.1,
+
+Bil2 -> IP address: 192.168.1.12, Subnet mask: 255.255.255.0, Default gateway:192.168.1.1,
+
+Bil3 -> IP address: 192.168.1.13, Subnet mask: 255.255.255.0, Default gateway:192.168.1.1,
+
+Bil4 -> IP adres: 172.168.0.11, Subnet mask: 255.255.0.0, Default gateway: 172.168.0.1,
+
+Bil5 -> IP adres: 172.168.0.12, Subnet mask: 255.255.0.0, Default gateway: 172.168.0.1,
+
+Bil6 -> IP adres: 172.168.0.13, Subnet mask: 255.255.0.0, Default gateway: 172.168.0.1)
+
+
+![image2.12](/images/level_2/image2_12.png)
+
+![image2.13](/images/level_2/image2_11.png)
+
+_Resim2.12 Föyde belirtilen ip ve default gateway adreslerine gör bilgisayarların yapılandırılması _
+
+•	Routher-ın “Ethernet” portları açılarak, IP yapılandırması gerçekleştirildi.
+
+(FA0/0: IP address: 192.168.1.1, Subnet mask: 255.255.255.0,
+
+FA0/1: IP address: 172.16.0.1, Subnet mask: 255.255. 0.0)
+
+![image2.14](/images/level_2/image2_13.png)
+
+![image2.15](/images/level_2/image2_14.png)
+
+_Resim2.13 Router-ın yapılandırılması _
+
+•	Bil1 isimli bilgisayardan Bil4, Bil5 ve Bil6 bilgisayarları arasındaki bağlantının test edilmesi.
+
+![image2.16](/images/level_2/image2_15.png)
+
+![image2.17](/images/level_2/image2_16.png)
+
+_Resim2.14 Bilgisayarlar arasındaki bağlantıların test edilmesi. _
+
+•	Bilgisayarlar arasındaki bağlantının simulation çalışma kipi kullanılarak test edilmesi.
+
+![image2.18](/images/level_2/image2_19.png)
+
+_Resim2.15 Simulation sekmesine geçip “Edit Filter” sekmesine geçilmesi. _
+
+![image2.19](/images/level_2/image2_8.png)
+
+_Resim2.16 ICMP ve ARP protokollerini seçilmesi ve simulation için ağın hazır hale gelmesi. _
+
+![image2.20](/images/level_2/image2_19.png)
+
+![image2.21](/images/level_2/image2_20.png)
+
+_Resim2.17 Simulation-un başlatılması ve paketin hareketi. _
+
+![image2.22](/images/level_2/image2_21.png)
+
+_Resim2.18 Simulation-un bitmesi. _
+
+•	Simulation panel-de Event list sekmesinde her hangi bir event-a çift tıkladığımızda, paketin hangi OSI katmanından geçtiğini takip edebiliriz.
+
+![image2.23](/images/level_2/image2_22.png)
+
+![image2.24](/images/level_2/image2_23.png)
+
+![image2.25](/images/level_2/image2_24.png)
+
+_Resim2.19 Eventlist-teki ilk event-in incelenmesi. _
