@@ -73,4 +73,4 @@ Föyde gerçeklemesi istenilen adımlar aşağıdaki gibidir. Bu adımlara göre
 -	Kaydetmek için, File -> Save seçilerek dosya yolu verildi ve çalışma kaydedildi.
 Yukarıdaki adımlar izlenerek ve yine föyde verilen öneriler dikkate alınarak istenilen ağ tasarımı gerçeklenmiş olup Resim 1.1-de gösterilmiştir.
 
-![image1.1](/images/image1.1.png)
+![image1.1](/images/level_1/image1.1.png)
