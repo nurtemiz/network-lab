@@ -184,3 +184,7 @@ _Şekil-13_
 ![image3.24](/images/level_3/3_23.png) 
 
 _Şekil-14_
+
+
+
+_**NUR TEMİZ**_
