@@ -50,11 +50,11 @@ Kablosuz ağa bağlanacak cihaz için gerekli yapılandırma işlemleri tamamlan
 
 ### UYGULAMA
 
-•	Çalışma alanına bir dağıtıcı, üç erişim noktası, üç dizüstü bilgisayar ve bir masaüstü bilgisayarın yerleştirilmesi:
+**•	Çalışma alanına bir dağıtıcı, üç erişim noktası, üç dizüstü bilgisayar ve bir masaüstü bilgisayarın yerleştirilmesi:**
 
 ![image4.2](/images/level_4/4-1.png)
  
-•	Erişim noktalarının kablosuz ağ ortamında hizmet verebileceği şekilde yapılandırılması:
+**•	Erişim noktalarının kablosuz ağ ortamında hizmet verebileceği şekilde yapılandırılması:**
 
 _Bilişim isimli erişim noktası için; SSID: Bilisim, WPA2-PSK: bilisim1_
 
@@ -71,7 +71,7 @@ _Megep isimli erişim noktası için; SSID: Megep, WPA2-PSK: bilisim3_
 ![image4.6](/images/level_4/4-5.png)
 
 
-•	Dizüstü bilgisayarları kablosuz ağa bağlamak için gerekli düzenlemelerin yapılması:
+**•	Dizüstü bilgisayarları kablosuz ağa bağlamak için gerekli düzenlemelerin yapılması:**
 
 Sırasıyla, dizüstü bilgisayarların yönetim penceresi fiziksel (Physical) sekmesinde, bilgisayarların kapatılmasının, ardından bilgisayarda takılı olan Ethernet kartını çıkartılması ve yerine Wireless Router modülünü takılması.
 
@@ -79,7 +79,7 @@ Sırasıyla, dizüstü bilgisayarların yönetim penceresi fiziksel (Physical) s
 
 ![image4.8](/images/level_4/4-7.png)
  
-•	Dizüstü bilgisayarların kablosuz ağa bağlamak için yapılandırılması:
+**•	Dizüstü bilgisayarların kablosuz ağa bağlamak için yapılandırılması:**
 
 Her dizüstü bilgisayarı, karşısında bulunan erişim noktasını kullanılarak kablosuz ağa bağlanması. Bu işlem için dizüstü bilgisayarların masaüstünde PC wireless yardımcı programı kullanılır. SSID seçimi yapılarak, 2. basamakta belirtilen erişim şifreleri kullanılır.
   
@@ -93,13 +93,11 @@ Her dizüstü bilgisayarı, karşısında bulunan erişim noktasını kullanıla
 
 ![image4.13](/images/level_4/4-12.png) 
 
-![image4.14](/images/level_4/4-13.png) 
-
 ![image4.15](/images/level_4/4-14.png) 
 
 ![image4.16](/images/level_4/4-15.png) 
 
-•	Masaüstü ve dizüstü bilgisayarlar için IP tanımlamasının yapılması:
+**•	Masaüstü ve dizüstü bilgisayarlar için IP tanımlamasının yapılması:**
 
 _Laptop0 için; IP adres : 192.168.1.10, Ağ maskesi:255.255.255.0_
 
@@ -118,7 +116,7 @@ _PC0 için; IP adres : 192.168.1.13, Ağ maskesi:255.255.255.0_
 ![image4.20](/images/level_4/4-19.png) 
   
 
-•	PC0 masaüstü bilgisayardan sırasıyla Laptop 0-1-2 ile olan bağlantıların ping komutu kullanarak test edilmesi:
+**•	PC0 masaüstü bilgisayardan sırasıyla Laptop 0-1-2 ile olan bağlantıların ping komutu kullanarak test edilmesi:**
 
 PC0 masaüstünde Command Prompt yardımcı programını açılarak komut satırını aşağıdaki komutların yazılması.
 
@@ -126,9 +124,10 @@ _> ping 192.168.1.10; > ping 192.168.1.11;  > ping 192.168.1.12;_
 
 ![image4.21](/images/level_4/4-21.png) 
  
-•	Laptop0 ile Laptop2 arasındaki bağlantının simulation kipinde tekrarlanması:
+**•	Laptop0 ile Laptop2 arasındaki bağlantının simulation kipinde tekrarlanması:**
   
 ![image4.22](/images/level_4/4-22.png) 
 
 ![image4.23](/images/level_4/4-23.png) 
 
+**_NUR TEMİZ_**
