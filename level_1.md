@@ -1,5 +1,7 @@
 ### 1. AĞ SİMÜLASYON PROGRAMLARI
 
+_Bu dökümanda oluşturulan ağ simülasyonu çalıştırılabilir pkt dosyasına [buradan](https://github.com/nurtemiz/network-lab/blob/master/pkt-files) ulaşabilirsiniz._
+
 Simülasyon, gerçek bir dünya süreci veya sisteminin işletilmesinin zaman üzerinden taklit edilmesidir (Banks ve Carson, 1984). Ağ simülasyonu, bir ağ ortamının bilgisayarda modellenmesi ve ağın fiziksel olarak kurulumu yapılmadan nasıl çalışacağının test edilmesi demektir. Bu test, TCP ve OSI referans modelini tüm detaylarıyla kapsayacak düzeyde olursa gerçek yaşamdaki ağların modellenmesinde herhangi bir sorunla karşılaşmadan başarıyla tamamlanabilir. 
 
 Ağ simülasyon programlarının büyük bir çoğunluğu, ağ ürünleri geliştiren firmaların eğitim ve tasarım amacıyla kullandıkları programlardır. 
